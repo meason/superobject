@@ -17,14 +17,14 @@
   "telephones": ["000000000", "111111111111"],
   "age": 33,
   "size": 1.83,
-  "adresses": [
+  "addresses": [
     {
-      "adress": "foo",
+      "address": "foo",
       "city": "The wall",
       "pc": 57000
     },
     {
-      "adress": "foo",
+      "address": "foo",
       "city": "Winterfell",
       "pc": 44000
     }
