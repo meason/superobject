@@ -188,6 +188,7 @@ end;
 ```
 ### Creating objects
 
+```js
 {
   "name": "Henri Gourvest", /* this is a comment */
   "vip": true,
@@ -207,6 +208,8 @@ end;
     }
   ]
 }
+```
+
 ```pas
   json := SO;
 
