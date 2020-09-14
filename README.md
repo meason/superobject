@@ -186,6 +186,56 @@ begin
   end;
 end;
 ```
+### Creating objects
+
+{
+  "name": "Henri Gourvest", /* this is a comment */
+  "vip": true,
+  "telephones": ["000000000", "111111111111"],
+  "age": 33,
+  "size": 1.83,
+  "addresses": [
+    {
+      "address": "blabla",
+      "city": "Metz",
+      "pc": 57000
+    },
+    {
+      "address": "blabla",
+      "city": "Nantes",
+      "pc": 44000
+    }
+  ]
+}
+```pas
+  json := SO;
+
+  json.S['name'] := 'Henri Gourvest';
+  json.B['vip'] := TRUE;
+  json.O['telephones'] := SA([]);
+  json.A['telephones'].S[0] := '000000000';
+  json.A['telephones'].S[1] := '111111111111';
+  json.I['age'] := 33;
+  json.D['size'] := 1.83;
+
+  json.O['addresses'] := SA([]);
+
+  json_sub := SO;
+  json_sub.S['address'] := 'blabla';
+  json_sub.S['city'] := 'Metz';
+  json_sub.I['pc'] := 57000;
+  json.A['addresses'].Add(json_sub);
+
+  json_sub.S['address'] := 'blabla';
+  json_sub.S['city'] := 'Nantes';
+  json_sub.I['pc'] := 44000;
+  json.A['addresses'].Add(json_sub);
+
+  json.SaveTo('C:\json_out.txt');
+
+  json := nil;
+  json_sub := nil;
+```  
 
 ## Saving data
 
